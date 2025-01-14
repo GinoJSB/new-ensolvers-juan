@@ -1,0 +1,3 @@
+INSERT INTO CATEGORY (id, name) VALUES (1L, 'Sport');
+INSERT INTO CATEGORY (id, name) VALUES (2L, 'Poronga');
+INSERT INTO CATEGORY (id, name) VALUES (3L, 'NOTE C');
