@@ -9,7 +9,7 @@ import java.util.List;
 public interface INotasService  {
 
     //metodo para crear una nota
-    public void saveNotas (Note noti);
+    public void saveNotas (NoteReqDTO dto);
 
     //metodo para borrar una nota
     public void deleteNotas (Long id);
