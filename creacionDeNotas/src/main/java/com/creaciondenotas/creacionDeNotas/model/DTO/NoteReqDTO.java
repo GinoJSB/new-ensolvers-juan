@@ -9,12 +9,10 @@ import org.antlr.v4.runtime.misc.NotNull;
 
 
 @Builder
-@Getter @Setter
-public class NotaReqDTO {
+@Getter
+@Setter
+public class NoteReqDTO {
     @NotNull private String titulo;
     @Nullable private String contenido;
     @NotNull private Boolean archived;
-
-
-
 }
