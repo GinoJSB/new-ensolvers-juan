@@ -1,15 +1,15 @@
 package com.creaciondenotas.creacionDeNotas.model.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+import java.util.List;
+
+@Getter
+@Setter
 @Entity
-public class Nota {
+public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,10 +17,13 @@ public class Nota {
     private String contenido;
     private boolean archived=false;
 
-    public Nota() {
+    @OneToMany(mappedBy = "note", cascade = {CascadeType.REMOVE})
+    private List<Category> categories;
+
+    public Note() {
     }
 
-    public Nota(Long id, String titulo, String contenido, boolean archived) {
+    public Note(Long id, String titulo, String contenido, boolean archived) {
         this.id = id;
         this.titulo = titulo;
         this.contenido = contenido;
