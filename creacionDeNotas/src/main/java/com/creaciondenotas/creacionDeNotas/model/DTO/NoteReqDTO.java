@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.util.List;
+
 
 @Builder
 @Getter
@@ -15,4 +17,5 @@ public class NoteReqDTO {
     @NotNull private String titulo;
     @Nullable private String contenido;
     @NotNull private Boolean archived;
+    @NotNull private List<Long> categoryIds;
 }
